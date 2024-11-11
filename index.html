@@ -16,13 +16,17 @@
       class="d-flex vh-100 w-50 m-auto d-flex justify-content-center align-items-center flex-column"
     >
       <!-- Numeri random e timer  -->
-      <div id="countdown" class="fs-2">
-        <p id="first-message">Memorizza i numeri entro 30 secondi</p>
+      <p id="first-message" class="fs-3">Memorizza i numeri entro 30 secondi</p>
+      <button id="start-btn" class="btn btn-primary" type="submit">Inizia</button>
+      <div id="countdown" class="fs-2"></div>
         <ul id="five-numbers"></ul>
-      </div>
+      
+
+
 
       <!-- Form  -->
-      <form action="" id="form-numbers" class="d-flex flex-direction-row gap-4">
+       <div class="d-none">
+      <form action="" id="form-numbers" class="d-flex gap-4">
         <div class="col-12 col-md">
           <label class="form-label" for="input-numbers">1-100</label>
           <input type="tel" class="form-control border border-black" id="input-numbers" />
@@ -45,12 +49,15 @@
           <label class="form-label" for="input-numbers">1-100</label>
           <input type="tel" class="form-control border border-black" id="input-numbers" />
         </div>
+        
       </form>
-
       <!-- Bottone  -->
-      <button type="button" class="btn btn-primary my-4">Conferma</button>
+      <button id="btn-value" type="button" class="btn btn-primary my-4">Conferma</button>
+
+      
 
       <!-- Risposta software  -->
+    </div>
     </div>
     <script src="./script/script.js"></script>
   </body>
