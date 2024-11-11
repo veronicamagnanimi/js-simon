@@ -1,4 +1,6 @@
 //prelevo l'id degli elementi
+let randomNumbers = [];
+let array = [];
 const numberCount = document.getElementById("countdown");
 const messageCount = document.getElementById("first-message");
 const btnCount = document.getElementById("start-btn");
@@ -11,27 +13,39 @@ const btnElem = document.getElementById("btn-value");
 console.log(formElem, btnElem);
 
 
+//numeri random da 1 a 100 in array con ciclo
+for (let i = 0; i < 5; i++) {
+    const randomNum = Math.floor(Math.random() * 100) + 1;
+    array.push(randomNum);
+    randomCount.innerHTML +=  `<div>${randomNum}</div>`
+}
+console.log(array);
 
 
 
-//innerHTML numeri random
+
+
 
 
 //quando clicco sul bottone, parte il countdown
 let counter = 30;
 
 btnCount.addEventListener("click", function() {
+    randomCount.classList.remove("d-none");
     const intervalId = setInterval(function() {
         numberCount.innerHTML = counter;
         counter--;   
 
-        if(counter === 0) {
+        if(counter < 0) {
             clearInterval(intervalId);
             btnCount.disabled = true;
+            randomCount.classList.add("d-none");
         }
-    })
+    }, 700);
+
     
-}, 1000);
+    
+});
 
 
 //appare il form una volta finito il countdown
@@ -48,10 +62,5 @@ btnCount.addEventListener("click", function() {
 
 
 
-//numeri random da 1 a 100 in array con ciclo
-let randomNumbers = [];
-for (let i = 0; i < 5; i++) {
-    randomNumbers.push(Math.floor(Math.random() * 100 ) + 1);
-}
-console.log(randomNumbers);
+
 
