@@ -17,47 +17,51 @@
     >
       <!-- Numeri random e timer  -->
       <p id="first-message" class="fs-3">Memorizza i numeri entro 30 secondi</p>
-      <button id="start-btn" class="btn btn-primary" type="submit">Inizia</button>
+      <button id="start-btn" class="btn btn-primary" type="submit">
+        Inizia
+      </button>
       <div id="countdown" class="fs-2"></div>
-        <ul id="five-numbers" class="d-flex gap-4 my-3 d-none"></ul>
-      
-
-
+      <ul id="five-numbers" class="d-flex gap-4 my-3 d-none"></ul>
 
       <!-- Form  -->
-       <div class="d-none">
-      <form action="" id="form-numbers" class="d-flex gap-4">
-        <div class="col-12 col-md">
-          <label class="form-label" for="input-numbers">1-100</label>
-          <input type="tel" class="form-control border border-black" id="input-numbers" value="1"/>
-        </div>
-
-        <div class="col-12 col-md">
-          <label class="form-label" for="input-numbers">1-100</label>
-          <input type="tel" class="form-control border border-black" id="input-numbers" value="2"/>
-        </div>
-
-        <div class="col-12 col-md">
-          <label class="form-label" for="input-numbers">1-100</label>
-          <input type="tel" class="form-control border border-black" id="input-numbers" value="3" />
-        </div>
-        <div class="col-12 col-md">
-          <label class="form-label" for="input-numbers">1-100</label>
-          <input type="tel" class="form-control border border-black" id="input-numbers" value="4" />
-        </div>
-        <div class="col-12 col-md">
-          <label class="form-label" for="input-numbers">1-100</label>
-          <input type="tel" class="form-control border border-black" id="input-numbers" value="5 "/>
-        </div>
+      <div id="second-part" class="d-none mt-4">
+        <form action="" id="form-numbers" class="d-flex gap-4">
+          <div class="col-12 col-md">
+            <label for="primo">Primo num.</label>
+            <input
+              type="number"
+              id="primo"
+              class="border border-black"
+              name="firstNum"
+              value="1"
+            />
+          </div>
+          <div class="col-12 col-md">
+            <label for="secondo">Secondo num.</label>
+            <input type="number" id="secondo" name="secondNum" value="2" />
+          </div>
+          <div class="col-12 col-md">
+            <label for="terzo">Terzo num.</label>
+            <input type="number" id="terzo" name="thirdNum" value="3" />
+          </div>
+          <div class="col-12 col-md">
+            <label for="quarto">Quarto num.</label>
+            <input type="number" id="quarto" name="fourNum" value="4" />
+          </div>
+          <div class="col-12 col-md">
+            <label for="quinto">Quinto num.</label>
+            <input type="number" id="quinto" name="fiveNum" value="5" />
+          </div>
+          <!-- Bottone  -->
+        <button id="btn-value" type="submit" class="btn btn-primary my-4">
+            Conferma
+          </button>
+        </form>
         
-      </form>
-      <!-- Bottone  -->
-      <button id="btn-value" type="button" class="btn btn-primary my-4">Conferma</button>
 
-      
-
-      <!-- Risposta software  -->
-    </div>
+        <!-- Risposta software  -->
+        <h3 id="result" class="d-none text-center pt-3"></h3>
+      </div>
     </div>
     <script src="./script/script.js"></script>
   </body>
